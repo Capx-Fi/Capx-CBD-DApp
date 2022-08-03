@@ -1,24 +1,34 @@
 import logo from "./logo.svg";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import SvgSprite from "./utils/SvgSpriteLoader";
+import { Layout } from "antd";
+import { Container } from "./components/common";
+import NavigationBar from "./components/layout/NavigationBar";
+import Footer from "./components/layout/Footer";
+import Landing from "./containers/Landing";
 import "./App.less";
+
+//Svg Sprite
+import svgFile from "./assets/images/svg/svg-sprite.svg";
+
+const { Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SvgSprite url={svgFile} />
+      <NavigationBar />
+        <Content className="main-content">
+          <Container>
+            <Router>
+              <Switch>
+                <Route exact path="/" component={Landing} />
+              </Switch>
+            </Router>
+          </Container>
+        </Content>
+      <Footer />
+    </>
   );
 }
 

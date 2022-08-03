@@ -1,0 +1,27 @@
+@import "../../../assets/less/_variables";
+
+.main-header{
+    width: 100%;
+    background: @white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background: @light-bg;
+    .container-section{
+        padding: 0 5vw;
+        .main-header-inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            .logo{
+                display: flex;
+                align-items: center;
+                .icon{
+                    width: 170px;
+                }
+            }
+        }
+    }
+}
