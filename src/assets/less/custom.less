@@ -40,7 +40,6 @@ a {
 }
 
 h1 {
-	color: @text-color-primary;
 	font-size: 2rem;
 	font-weight: bold;
 	@media screen and (max-width:1440px) {
@@ -52,7 +51,6 @@ h1 {
 }
 
 h2 {
-	color: @text-color-primary;
 	font-weight: bold;
 	@media screen and (max-width:1440px) {
 		font-size: 18px;
@@ -64,21 +62,12 @@ h2 {
 
 h3 {
 	font-size: @font-size-xlg + 2;
-	color: @text-color-primary;
 	font-weight: 600;
-}
-
-h4 {
-	color: @text-color-primary;
 }
 
 p {
 	font-size: @font-size-base + 2;
 	color: @subtext-color;
-}
-
-b {
-	color: @text-color-primary;
 }
 
 .ant-btn {
@@ -88,20 +77,32 @@ b {
 	text-transform: uppercase;
 	&.ant-btn-primary {
 		background: @primary-color;
-		border: 1px solid @border-color-base;
+		border: 1px solid @primary-color;
 		color: @white;
 		border-radius: 4px;
+		.icon{
+			fill: @white;
+		}
+	}
+	&.siffix-icon{
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: center;
+		.icon{
+			margin-left: 10px;
+		}
 	}
 	&.ant-btn-secondary {
 		background: @btn-gradient;
 		color: @secondary-color;
 
 		font-weight: bold;
-		&.ant-btn-lg {
-			height: 50px;
-			line-height: 50px;
-			padding: 0 30px;
-		}
+	}
+	&.ant-btn-lg {
+		height: 55px;
+		line-height: 55px;
+		padding: 0 40px;
 	}
 }
 
