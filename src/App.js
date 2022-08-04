@@ -5,7 +5,8 @@ import { Layout } from "antd";
 import { Container } from "./components/common";
 import NavigationBar from "./components/layout/NavigationBar";
 import Footer from "./components/layout/Footer";
-import Landing from "./containers/Landing";
+import ProjectDetails from "./containers/ProjectDetails";
+import ConfigureProgrammable from "./containers/ConfigureProgrammable";
 import "./App.less";
 
 //Svg Sprite
@@ -22,7 +23,8 @@ function App() {
           <Container>
             <Router>
               <Switch>
-                <Route exact path="/" component={Landing} />
+                <Route exact path="/" component={ProjectDetails} />
+                <Route exact path="/configure-programmable" component={ConfigureProgrammable} />
               </Switch>
             </Router>
           </Container>

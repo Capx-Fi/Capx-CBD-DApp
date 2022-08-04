@@ -12,7 +12,7 @@ const NavigationBar = () => {
                         <SvgIcon name="logo" viewbox="0 0 177.093 31.204" />
                     </div>
                     <div className="right">
-                        <Button className="with-icon" type="primary" size="small">Connect Wallet</Button>
+                        <Button className="with-icon connected-btn" size="small" icon={<SvgIcon name="logout" viewbox="0 0 15.85 15.85" />}>0x444....897689</Button>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,54 @@
+@import "../../assets/less/_variables";
+
+.steps-wrapper{
+    .steps-head{
+        border-bottom: 1px solid #E3E5E7;
+        margin-bottom: 2.8rem;
+        h1{
+            margin-bottom: 0.5rem;
+        }
+    }
+    .steps-body{
+        .next-btn{
+            height: 50px;
+        }
+        .percbd-tag{
+            background: #E9EBEC;
+            border-radius: 20px;
+            font-size: @font-size-base;
+            padding: 4px 12px;
+            color: @text-color-primary;
+        }
+        .ant-form-item{
+            margin-bottom: 1.8rem;
+        }
+        .hint-text{
+            color: @text-color-secondary;
+            font-size: @font-size-base - 1;
+            padding-left: 10px;
+            padding-top: 4px;
+            display: flex;
+            align-items: center;
+            .icon{
+                width: 12px;
+                margin-right: 4px;
+                fill: @text-color-secondary;
+            }
+        }
+    }
+    .steps-footer{
+        border-top: 1px solid #E3E5E7;
+        margin-top: 1rem;
+        padding: 1rem 0;
+        .footer-action{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                font-weight: 700;
+                color: @text-color-secondary;
+                font-size: @font-size-base + 1;
+            }
+        }
+    }
+}
