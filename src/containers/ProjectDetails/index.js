@@ -70,7 +70,7 @@ const ProjectDetails = () => {
                   </Form.Item>
                 </Col>
                 <Col sm="6">
-                  <Button htmlType="submit" className="siffix-icon next-btn" type="primary" icon={<SvgIcon name="arrow-right" viewbox="0 0 16.715 11.765" />} block>Next (1/3)</Button>
+                  <Button htmlType="submit" className="suffix-icon next-btn" type="primary" icon={<SvgIcon name="arrow-right" viewbox="0 0 16.715 11.765" />} block>Next (1/3)</Button>
                 </Col>
               </Row>
             </Form>

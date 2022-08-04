@@ -88,13 +88,22 @@ p {
 			fill: @white;
 		}
 	}
-	&.siffix-icon{
+	&.suffix-icon{
 		display: flex;
 		align-items: center;
 		flex-direction: row-reverse;
 		justify-content: center;
 		.icon{
 			margin-left: 10px;
+		}
+	}
+	&.prefix-icon{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon{
+			margin-right: 10px;
+			width: 12px;
 		}
 	}
 	&.ant-btn-secondary {
@@ -539,4 +548,37 @@ p {
 	  h3{
 		  margin-bottom: 3px;
 	  }
+  }
+
+  .common-table{
+	.ant-table{
+		table{
+			.ant-table-thead{
+				tr{
+					background: @white;
+					th{
+						&.ant-table-cell{
+							padding: 15px 10px;
+							background: @white;
+							font-size: @font-size-base;
+							font-weight: 600;
+							color: @text-color-secondary;
+						}
+						&::before{
+							display: none;
+						}
+					}
+				}
+			}
+			.ant-table-tbody{
+				tr{
+					td{
+						&.ant-table-cell{
+							background: @white;
+						}
+					}
+				}
+			}
+		}
+	}
   }
