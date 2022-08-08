@@ -11,6 +11,7 @@ import "./App.less";
 
 //Svg Sprite
 import svgFile from "./assets/images/svg/svg-sprite.svg";
+import CustomizeCBD from "./containers/CustomizeCBDs";
 
 const { Content } = Layout;
 
@@ -19,16 +20,21 @@ function App() {
     <>
       <SvgSprite url={svgFile} />
       <NavigationBar />
-        <Content className="main-content">
-          <Container>
-            <Router>
-              <Switch>
-                <Route exact path="/" component={ProjectDetails} />
-                <Route exact path="/configure-programmable" component={ConfigureProgrammable} />
-              </Switch>
-            </Router>
-          </Container>
-        </Content>
+      <Content className="main-content">
+        <Container>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={ProjectDetails} />
+              <Route
+                exact
+                path="/configure-programmable"
+                component={ConfigureProgrammable}
+              />
+              <Route exact path="/customize-cbd" component={CustomizeCBD} />
+            </Switch>
+          </Router>
+        </Container>
+      </Content>
       <Footer />
     </>
   );

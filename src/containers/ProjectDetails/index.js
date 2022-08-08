@@ -2,12 +2,13 @@ import React from "react";
 import { Button, Form, Input } from "antd";
 import { Col, Row, SvgIcon } from "../../components/common";
 import "./index.less";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const ProjectDetails = () => {
   const onFinish = (values) => {
-    console.log('Received values of form: ', values);
+    console.log("Received values of form: ", values);
   };
+  const history = useHistory();
   return (
     <div className="steps-wrapper">
       <Row>
@@ -45,7 +46,9 @@ const ProjectDetails = () => {
                     rules={[{ required: true, message: false }]}
                   >
                     <Input placeholder="Total amount to be raised *" />
-                    <div className="hint-text">Add numbers without the $ (dollar) symbol</div>
+                    <div className="hint-text">
+                      Add numbers without the $ (dollar) symbol
+                    </div>
                   </Form.Item>
                 </Col>
                 <Col sm="6">
@@ -53,8 +56,13 @@ const ProjectDetails = () => {
                     name="price"
                     rules={[{ required: true, message: false }]}
                   >
-                    <Input suffix={<span className="percbd-tag">per CBD</span>} placeholder="Price per CBD *" />
-                    <div className="hint-text">Add numbers without the $ (dollar) symbol</div>
+                    <Input
+                      suffix={<span className="percbd-tag">per CBD</span>}
+                      placeholder="Price per CBD *"
+                    />
+                    <div className="hint-text">
+                      Add numbers without the $ (dollar) symbol
+                    </div>
                   </Form.Item>
                 </Col>
                 <Col sm="6">
@@ -70,7 +78,18 @@ const ProjectDetails = () => {
                   </Form.Item>
                 </Col>
                 <Col sm="6">
-                  <Button htmlType="submit" className="suffix-icon next-btn" type="primary" icon={<SvgIcon name="arrow-right" viewbox="0 0 16.715 11.765" />} block>Next (1/3)</Button>
+                  <Button
+                    onClick={() => history.push("configure-programmable")}
+                    htmlType="submit"
+                    className="suffix-icon next-btn"
+                    type="primary"
+                    icon={
+                      <SvgIcon name="arrow-right" viewbox="0 0 16.715 11.765" />
+                    }
+                    block
+                  >
+                    Next (1/3)
+                  </Button>
                 </Col>
               </Row>
             </Form>
