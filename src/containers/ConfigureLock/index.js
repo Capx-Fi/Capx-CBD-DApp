@@ -8,7 +8,7 @@ import { Link, useHistory } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
 import "./index.less";
 
-const ConfigureProgrammable = () => {
+const ConfigureLock = () => {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
@@ -130,4 +130,4 @@ const ConfigureProgrammable = () => {
   );
 };
 
-export default ConfigureProgrammable;
+export default ConfigureLock;

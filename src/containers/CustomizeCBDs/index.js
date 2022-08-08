@@ -18,7 +18,7 @@ const CustomizeCBD = () => {
 
           <div className="steps-footer">
             <div className="footer-action">
-              <Link to="/">BACK</Link>
+              <Link to="/configure-programmable">BACK</Link>
               <Button
                 htmlType="submit"
                 className="suffix-icon next-btn"

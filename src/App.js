@@ -6,12 +6,12 @@ import { Container } from "./components/common";
 import NavigationBar from "./components/layout/NavigationBar";
 import Footer from "./components/layout/Footer";
 import ProjectDetails from "./containers/ProjectDetails";
-import ConfigureProgrammable from "./containers/ConfigureProgrammable";
 import "./App.less";
 
 //Svg Sprite
 import svgFile from "./assets/images/svg/svg-sprite.svg";
 import CustomizeCBD from "./containers/CustomizeCBDs";
+import ConfigureLock from "./containers/ConfigureLock";
 
 const { Content } = Layout;
 
@@ -28,7 +28,7 @@ function App() {
               <Route
                 exact
                 path="/configure-programmable"
-                component={ConfigureProgrammable}
+                component={ConfigureLock}
               />
               <Route exact path="/customize-cbd" component={CustomizeCBD} />
             </Switch>
