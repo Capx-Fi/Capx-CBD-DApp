@@ -16,7 +16,7 @@ const ProjectDetails = () => {
           <div className="steps-head">
             <h1>Enter project details for your Community Bonds</h1>
           </div>
-          <div className="steps-body">
+          <div className="steps-body" style={{ marginTop: 60 }}>
             <Form
               name="normal_login"
               className="login-form"

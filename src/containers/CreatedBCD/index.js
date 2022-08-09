@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
 import "./index.less";
 
-import cbdImage from '../../assets/images/cbd-img.png';
+import cbdImage from "../../assets/images/cbd-img.png";
 
 const CreatedBCD = () => {
   const history = useHistory();
@@ -15,8 +15,16 @@ const CreatedBCD = () => {
         <Col xs="12">
           <div className="created-card">
             <h1>Congratulations! Your CBDs have been successfully created</h1>
-            <p>You can view your created CBD projects in Project Owner Dashboard</p>
-            <Button size="large" type="primary">TAKE ME TO HOMEPAGE</Button>
+            <p>
+              You can view your created CBD projects in Project Owner Dashboard
+            </p>
+            <Button
+              size="large"
+              onClick={() => history.push("/")}
+              type="primary"
+            >
+              TAKE ME TO HOMEPAGE
+            </Button>
             <img className="right-img" src={cbdImage} alt={cbdImage} />
           </div>
         </Col>
