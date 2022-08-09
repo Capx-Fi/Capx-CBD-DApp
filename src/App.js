@@ -12,6 +12,8 @@ import "./App.less";
 import svgFile from "./assets/images/svg/svg-sprite.svg";
 import CustomizeCBD from "./containers/CustomizeCBDs";
 import ConfigureLock from "./containers/ConfigureLock";
+import ReviewCBD from "./containers/ReviewCBDs";
+import CreatedBCD from "./containers/CreatedBCD";
 
 const { Content } = Layout;
 
@@ -31,6 +33,8 @@ function App() {
                 component={ConfigureLock}
               />
               <Route exact path="/customize-cbd" component={CustomizeCBD} />
+              <Route exact path="/review-cbd" component={ReviewCBD} />
+              <Route exact path="/created-cbd" component={CreatedBCD} />
             </Switch>
           </Router>
         </Container>

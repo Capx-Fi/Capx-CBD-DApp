@@ -1,2 +1,74 @@
 @import "../../assets/less/_variables";
 
+.customizecbd-list{
+    list-style-type: none;
+    padding-left: 0;
+    display: inline-block;
+    li{
+        display: inline-block;
+        max-width: 364px;
+        margin-right: 30px;
+        width: 100%;
+        background: #FAFAFA;
+        border: 1px solid #F1F2F3;
+        border-radius: 8px;
+        padding: 16px;
+        p{
+            font-size: 14px;
+            color: @text-color-primary;
+            font-weight: 500;
+            padding-left: 15px;
+        }
+        h4{
+            color: @text-color-secondary;
+            font-weight: bold;
+            padding-left: 15px;
+        }
+        .bottom-section{
+            padding-left: 15px;
+            .ant-input{
+                border-width: 1px 1px 3px 1px;
+                border-color: @text-color-secondary;
+                max-width: 290px;
+                &::placeholder{
+                    color: @text-color-primary;
+                }
+                &::-webkit-placeholder{
+                    color: @text-color-primary;
+                }
+                &::-moz-placeholder{
+                    color: @text-color-primary;
+                }
+            }
+        }
+        hr{
+            background: #E3E5E7;
+            opacity: 0.4;
+        }
+        .ant-divider{
+            font-weight: 600;
+            color: @text-color-secondary;
+            &::before{
+                border-top-width: 2px;
+            }
+            &::after{
+                border-top-width: 2px;
+                width: 25%;
+            }
+        }
+        .upload-btn{
+            border-radius: 30px;
+            height: 45px;
+            font-weight: 600;
+            border:2px solid @primary-color;
+            text-transform: inherit;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            .icon{
+                margin-right: 10px;
+                width: 18px;
+            }
+        }
+    }
+}

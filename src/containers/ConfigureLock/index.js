@@ -23,32 +23,47 @@ const ConfigureLock = () => {
       title: "SR.NO",
       dataIndex: "sr_no",
       key: "sr_no",
+      render: (text) => <span className="serial-number">{text}</span>
     },
     {
       title: (
-        <>
+        <div className="titlewith-tooltip">
           UNLOCK DATE {"&"} TIME{" "}
           <Tooltip placement="top" title="text">
             <SvgIcon name="info" viewbox="0 0 17.5 17.5" />
           </Tooltip>
-        </>
+        </div>
       ),
       dataIndex: "date_time",
       key: "date_time",
       render: () => <Input placeholder="Unlock Date" type={"datetime-local"} />,
     },
     {
-      title: "MIN. PROMISED RETURNS",
+      title: (
+        <div className="titlewith-tooltip">
+          MIN. PROMISED RETURNS
+          <Tooltip placement="top" title="text">
+            <SvgIcon name="info" viewbox="0 0 17.5 17.5" />
+          </Tooltip>
+        </div>
+      ),
       dataIndex: "promised_return",
       key: "promised_return",
       render: () => <Input placeholder="Enter % return" />,
     },
     {
-      title: "ALLOT NO. OF CBDs",
+      title: (
+        <div className="titlewith-tooltip">
+          ALLOT NO. OF CBDs
+          <Tooltip placement="top" title="text">
+            <SvgIcon name="info" viewbox="0 0 17.5 17.5" />
+          </Tooltip>
+        </div>
+      ),
       dataIndex: "allot_no",
       key: "allot_no",
       render: () => (
-        <Input placeholder="Allot no. of CBDs" suffix={<Badge text="MAX" />} />
+        <Input placeholder="Allot no. of CBDs" suffix={<span className="allotmax-badge">MAX</span>} />
       ),
     },
     {
