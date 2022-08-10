@@ -7,7 +7,7 @@ import "./index.less";
 
 import cbdImage from "../../assets/images/cbd-img.png";
 
-const CreatedBCD = () => {
+const CreatedCBD = () => {
   const history = useHistory();
   return (
     <div className="steps-wrapper">
@@ -33,4 +33,4 @@ const CreatedBCD = () => {
   );
 };
 
-export default CreatedBCD;
+export default CreatedCBD;

@@ -22,6 +22,7 @@ const NavigationBar = () => {
     solanaConnection,
     randomKey,
     phantomConnect,
+    hasPhantom,
     anchorProgram,
   } = useCapxWalletConnection();
 
@@ -43,7 +44,7 @@ const NavigationBar = () => {
                 {phantomPublicKey?.toBase58().toString()?.substr(0, 6)}...
                 {phantomPublicKey?.toBase58().toString()?.substr(-4)}
               </Button>
-            ) : (
+            ) : hasPhantom ? (
               <Button
                 className="with-icon disconnected-btn"
                 size="small"
@@ -53,6 +54,16 @@ const NavigationBar = () => {
                 }}
               >
                 CONNECT
+              </Button>
+            ) : (
+              <Button
+                className="with-icon disconnected-btn"
+                size="small"
+                onClick={() => {
+                  window.open("https://phantom.app/");
+                }}
+              >
+                GET PHANTOM
               </Button>
             )}
           </div>
